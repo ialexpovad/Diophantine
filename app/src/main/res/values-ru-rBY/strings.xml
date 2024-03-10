@@ -26,4 +26,6 @@
     <string name="limit_error">Введите степень или k, p, mod</string>
     <string name="square_text">Квадраты натуральных чисел?</string>
     <string name="calculate_button_text">Рассчитать</string>
+    <string name="testing_notice">Это приложение имеет образовательный характер и находится на стадии альфа-тестирования. Оно проходит тестирование на соответствие правильным вычислениям.</string>
+
 </resources>

@@ -26,4 +26,7 @@
 
     <string name="square_text">Squares of Natural Numbers?</string>
     <string name="calculate_button_text">Calculate</string>
+
+    <string name="testing_notice">This application is educational in nature and is currently in the alpha testing stage. It undergoes rigorous testing to ensure compliance with correct calculations.</string>
+
 </resources>
