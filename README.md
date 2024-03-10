@@ -28,7 +28,7 @@ Diophantine Solver is an Android app that helps users solve Diophantine equation
 
 ## Contributing
 
-If you would like to contribute to the development of this app, please follow the guidelines in CONTRIBUTING.md.
+If you would like to contribute to the development of this app, please follow the guidelines in [CONTRIBUTING](CONTRIBUTING).
 
 ## License
 
