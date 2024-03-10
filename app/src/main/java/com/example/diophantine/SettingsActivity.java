@@ -66,7 +66,7 @@ public class SettingsActivity extends AppCompatActivity {
             preferences.edit().putInt(PREF_KEY_THEME, checkedId).apply();
             applyTheme();
             // Restart the activity to reflect theme change
-            recreate();
+            restartMainActivity();
         });
     }
 
@@ -111,5 +111,10 @@ public class SettingsActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    private void restartMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

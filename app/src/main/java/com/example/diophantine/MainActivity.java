@@ -1,9 +1,12 @@
 package com.example.diophantine;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -26,8 +29,11 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String PREF_KEY_THEME = "theme";
+    private static final String PREF_KEY_LANGUAGE = "language";
 
     private TextView equationTextView;
     private EditText degreeEditText, kEditText, pEditText, modEditText;
@@ -41,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        applySavedTheme();
+        applySavedLanguage();
 
         equationTextView = findViewById(R.id.equationTextView);
         degreeEditText = findViewById(R.id.degreeEditText);
@@ -229,4 +238,41 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+
+    private void applySavedTheme() {
+        SharedPreferences preferences = getSharedPreferences("settings", MODE_PRIVATE);
+        int selectedTheme = preferences.getInt(PREF_KEY_THEME, R.id.lightTheme);
+
+        if (selectedTheme == R.id.lightTheme) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else if (selectedTheme == R.id.darkTheme) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else if (selectedTheme == R.id.systemTheme) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+        }
+    }
+
+    private void applySavedLanguage() {
+        SharedPreferences preferences = getSharedPreferences("settings", MODE_PRIVATE);
+        int selectedLanguage = preferences.getInt(PREF_KEY_LANGUAGE, R.id.englishLanguage);
+        setAppLanguage(selectedLanguage);
+    }
+
+    private void setAppLanguage(int languageId) {
+        String languageCode;
+        if (languageId == R.id.englishLanguage) {
+            languageCode = "en";
+        } else {
+            languageCode = "ru";
+        }
+
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+    }
+
+
+
 }
