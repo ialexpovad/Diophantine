@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diophantine</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_about">О программе</string>
+    <string name="copyright">Copyright © Alex Povad</string>>
+    <string name="about_text">Diophantine - это приложение для Android, которое позволяет пользователям исследовать диофантовы уравнения.
+        Введите необходимые параметры, и приложение рассчитает решения на основе предоставленных условий.
+        Независимо от того, заинтересованы ли вы в квадратных или неквадратичных решениях, это приложение предоставляет инструмент для изучения
+        увлекательный мир диофантовых уравнений. Исходный код доступен на <a href="https://github.com/alexapicard/Diophantine">GitHub</a>.
+    </string>
+    <!-- Theme Section -->
+    <string name="theme">Тема</string>
+    <string name="light_theme">Светлая</string>
+    <string name="dark_theme">Темная</string>
+    <string name="system_theme">Системная</string>
+
+    <!-- Language Section -->
+    <string name="language">Язык</string>
+    <string name="english_language">English</string>
+    <string name="russian_language">Русский</string>
+
+    <string name="equation_text">m^{pk}=2n-1</string>
+    <string name="enter_degree_hint">Введите степень m</string>
+    <string name="limit_text">Предел для n: </string>
+    <string name="limit_error">Введите степень или k, p, mod</string>
+    <string name="square_text">Квадраты натуральных чисел?</string>
+    <string name="calculate_button_text">Рассчитать</string>
+</resources>
