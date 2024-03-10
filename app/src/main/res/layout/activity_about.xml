@@ -7,11 +7,13 @@
     android:fitsSystemWindows="true"
     tools:context=".AboutActivity">
 
+    <!-- App Bar -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
+        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -21,41 +23,67 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
-        android:id="@+id/about_text_view"
+    <!-- Main Content -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/about_text"
-        android:textSize="18sp"
-        android:padding="16dp"
-        android:layout_marginTop="?attr/actionBarSize" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical">
-
-
-
-        <!-- Add the following TextView for the educational alpha testing notice -->
+        <!-- About Text -->
         <TextView
-            android:id="@+id/testingNoticeTextView"
-            android:layout_width="wrap_content"
+            android:id="@+id/about_text_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/testing_notice"
-            android:textSize="14sp"
-            android:autoLink="web" />
+            android:text="@string/about_text"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginTop="?attr/actionBarSize" />
 
-        <TextView
-            android:id="@+id/copyrightTextView"
-            android:layout_width="wrap_content"
+        <!-- Bottom Frame Layout -->
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/copyright"
-            android:textSize="14sp"
-            android:autoLink="web" />
+            android:layout_gravity="bottom|center_horizontal"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_alignParentBottom="true">
 
-    </LinearLayout>
+            <!-- Bottom LinearLayout -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom|center_horizontal">
 
+                <!-- Testing Notice -->
+                <TextView
+                    android:id="@+id/testingNoticeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/testing_notice"
+                    android:textSize="14sp" />
+
+                <!-- Version -->
+                <!-- TODO: add autoupdate versioning -->
+                <TextView
+                    android:id="@+id/versionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/version"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="bottom|center_horizontal" />
+
+                <!-- Copyright -->
+                <TextView
+                    android:id="@+id/copyrightTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/copyright"
+                    android:textSize="14sp"
+                    android:autoLink="web"
+                    android:layout_gravity="bottom|center_horizontal" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
