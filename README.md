@@ -1,7 +1,7 @@
 # Diophantine
 Diophantine Solver is an Android app that helps users solve Diophantine equations. The app provides a user-friendly interface to input parameters such as degree, limit, and optional settings. It then calculates and displays solutions based on the specified Diophantine equation.
 
-![Demo app](https://raw.githubusercontent.com/ialexpovad/Diophantine/assets/demo.gif)
+![Demo app](https://raw.githubusercontent.com/ialexpovad/Diophantine/main/assets/demo.gif)
 
 ## Features
 
