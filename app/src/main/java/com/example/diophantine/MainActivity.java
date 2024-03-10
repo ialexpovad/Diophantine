@@ -159,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
     }
     private List<String> solveDiophantine(int degree, int k, int p, int mod, int limit, boolean squares) {
         List<String> solutions = new ArrayList<>();
-
         if (!squares) {
             if (k == 0 && p == 0 && mod == 0) {
                 for (int n = 1; n <= limit; n++) {
