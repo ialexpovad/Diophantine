@@ -53,8 +53,11 @@ public class MainActivity extends AppCompatActivity {
         applySavedTheme();
         applySavedLanguage();
 
-        if (savedInstanceState == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        if (savedInstanceState == null)
             SelfUpdate.checkUpdate(this, "ialexpovad", "Diophantine");
+
+//        if (savedInstanceState == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+//            SelfUpdate.checkUpdate(this, "ialexpovad", "Diophantine");
 
         equationTextView = findViewById(R.id.equationTextView);
         degreeEditText = findViewById(R.id.degreeEditText);
