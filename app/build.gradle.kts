@@ -10,8 +10,8 @@ android {
         applicationId = "com.example.diophantine"
         minSdk = 23
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.6"
+        versionCode = 8
+        versionName = "1.7"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

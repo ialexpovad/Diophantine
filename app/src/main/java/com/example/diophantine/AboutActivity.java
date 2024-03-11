@@ -48,7 +48,7 @@ public class AboutActivity extends AppCompatActivity {
         aboutTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         TextView versionTextView = findViewById(R.id.versionTextView);
-        versionTextView.setText(getString(R.string.version) + " " + BuildConfig.VERSION_NAME );
+        versionTextView.setText(getString(R.string.version) + " " + BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")");
 
     }
 
