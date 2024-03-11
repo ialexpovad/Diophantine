@@ -10,6 +10,7 @@ import android.content.res.Configuration;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -24,6 +25,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.diophantine.databinding.ActivityMainBinding;
+import com.example.diophantine.selfupdate.SelfUpdate;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         applySavedTheme();
         applySavedLanguage();
+
+        if (savedInstanceState == null && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            SelfUpdate.checkUpdate(this, "ialexpovad", "Diophantine");
 
         equationTextView = findViewById(R.id.equationTextView);
         degreeEditText = findViewById(R.id.degreeEditText);

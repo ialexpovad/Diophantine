@@ -28,5 +28,7 @@
     <string name="calculate_button_text">Calculate</string>
 
     <string name="testing_notice">This application is educational in nature and is currently in the alpha testing stage. It undergoes rigorous testing to ensure compliance with correct calculations.</string>
-    <string name="version">Version 1.2</string>
+    <string name="version">Version</string>
+    <string name="dialog_update_title">Do you want to update the app?</string>
+    <string name="dialog_downloading_title">Downloading the update…</string>
 </resources>
